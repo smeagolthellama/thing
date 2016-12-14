@@ -9,7 +9,6 @@ int a(char *t);
 void nextchar(char *t, int &i, char c);
 void toendofchar(char* t, int& i);
 /**
-b. A második sor minden szavának első betűjét írjuk át nagy betűre!
 c. Töröljük a harmadik sor leghosszabb szavának hosszával egyező hosszúságú szavakat!
 d. Határozzuk meg az állomány szavainak számát!
 e. Írjuk meg azt a függvényt, amely kicseréli egy szám egy adott számjegyének összes előfordulását egy másik számjegyre. A függvénynek 3 paramétere van, a megváltoztatott számot az első paraméterében küldi vissza. Ha nem találja meg a cserélendő számjegyet, az eredeti számot téríti vissza. A meghíváskor az első paraméter egy szám, amelyet az első alpontban számoltunk ki, a második és harmadik paraméter két számjegy a billentyűzetről beolvasva. (A feladatot karakterláncokkal kell megoldani, az atoi és az itoa függvények használatával!!!).
@@ -67,4 +66,14 @@ int a(char* t)
 		i=0;
 	}
 	return n;
+}
+/**
+b. A második sor minden szavának első betűjét írjuk át nagy betűre!*/
+void b(char *t){
+	int i=0;
+    while(i<strlen(t)){
+		t[i]=toupper(t[i]);
+		nextchar(t,i,' ');
+		toendofchar(t,i);
+    }
 }
