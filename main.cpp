@@ -27,7 +27,7 @@ int main()
 
 void nextchar(char* t, int& i, char c)
 {
-	while(t[i] != c && strlen(t) > i) {
+	while(t[i] != c && (int)strlen(t) > i) {
 		i++;
 	}
 }
